@@ -1,4 +1,19 @@
-﻿body {
+﻿header #topImg{
+    width:100%;
+    height:400px;
+    background-color:green;
+    background-image:url("../img/top.jpg");
+    background-size:cover;
+    background-position:center center;
+}
+
+header h1{
+    width:1000px;
+    margin:15px auto;
+    font-size:1.8rem;
+}
+
+body {
     font-family: "游ゴシック Medium",YuGothic,YuGothicM,"Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro",メイリオ,Meiryo,sans-serif;
     font-size:16px;
 }
@@ -8,7 +23,7 @@ main h2 {
     background-color: #625330;
     color:white;
     font-size:1.8rem;
-    margin:30px;
+    margin:15px;
 }
 
 main div{
@@ -49,7 +64,11 @@ section li{
     line-height:1.8rem;
 }
 
+section figure img{
+    width:100%;
+    margin-top :20px;
 
+}
 
 footer {
     width: 100%;
@@ -64,6 +83,7 @@ footer h2 {
     font-size: 1.3rem;
     width: 1000px;
 }
+
 footer p {
     margin: 20px auto 0;
     font-size: 1rem;
