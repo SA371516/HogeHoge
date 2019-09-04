@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test3</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="test3.css">
+</head>
+<body>
+
+<div id="pull">カードを引く</div>
+<div id="match">勝負に挑む</div>
+<h1></h1>
+<p></p>
+<h2></h2>
+
+<script type="text/javascript">
+    $("#pull").on("click", function () {
+        sum_num = Number($("h1").text);
+        num = Math.floor(Math.random() * 5);
+        sum_num += num;
+        $("h1").text(sum_num);
+        //敗北処理
+        if (sum_num >= 11) {
+            $("p").text("あなたは敗北しました");
+        }
+    })
+    $("#match").on("click", function () {
+        $("div").each(function (index) {
+            $(this).addClass("hideID");
+        })
+        player_num = Number($("h1").text);
+        cpu_num = Math.floor(Math.random() * 5);
+        cpu_num += 5;//6～10にするため
+        $("p").text("勝負!コンピューターの持ち点は" + cpu_num + "です");
+        if (player_num > cpu_num) {
+            $("h2").text("勝ちました");
+        }
+        else if (player_num < cpu_num) {
+            $("p").text("負けました");
+        }
+        else {
+            $("p").text("引き分けです");
+        }
+    })
+</script>
+
+</body>
+</html>
