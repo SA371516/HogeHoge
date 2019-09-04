@@ -15,20 +15,20 @@
 
 <script type="text/javascript">
     $("#pull").on("click", function () {
-        sum_num = Number($("h1").text);
+        sum_num = Number($("h1").text());
         num = Math.floor(Math.random() * 5);
         sum_num += num;
         $("h1").text(sum_num);
         //”s–kˆ—
         if (sum_num >= 11) {
-            $("p").text("‚ ‚È‚½‚Í”s–k‚µ‚Ü‚µ‚½");
+            $("h2").text("‚ ‚È‚½‚Í”s–k‚µ‚Ü‚µ‚½");
         }
     })
     $("#match").on("click", function () {
         $("div").each(function (index) {
             $(this).addClass("hideID");
         })
-        player_num = Number($("h1").text);
+        player_num = Number($("h1").text());
         cpu_num = Math.floor(Math.random() * 5);
         cpu_num += 5;//6`10‚É‚·‚é‚½‚ß
         $("p").text("Ÿ•‰!ƒRƒ“ƒsƒ…[ƒ^[‚Ì‚¿“_‚Í" + cpu_num + "‚Å‚·");
@@ -36,10 +36,10 @@
             $("h2").text("Ÿ‚¿‚Ü‚µ‚½");
         }
         else if (player_num < cpu_num) {
-            $("p").text("•‰‚¯‚Ü‚µ‚½");
+            $("h2").text("•‰‚¯‚Ü‚µ‚½");
         }
         else {
-            $("p").text("ˆø‚«•ª‚¯‚Å‚·");
+            $("h2").text("ˆø‚«•ª‚¯‚Å‚·");
         }
     })
 </script>
